@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill /F /IM streamlit.exe)",
+      "Bash(pip install:*)",
+      "Bash(python -c \"import streamlit; print\\(streamlit.__version__\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(python -c \"import app\")",
+      "Bash(python -c \"import reportlab\")",
+      "Bash(python -c \"import fpdf\")",
+      "Bash(python -c \"import weasyprint\")",
+      "Bash(python -c \"from fpdf import FPDF; print\\(''fpdf2 ok''\\)\")",
+      "Bash(del \"C:/Users/megan/OneDrive/Desktop/AniSound/test.pdf\")",
+      "Bash(python generate_pdf.py)",
+      "Bash(ls \"c:/Users/megan/OneDrive/Desktop/AniSound/\"*.py \"c:/Users/megan/OneDrive/Desktop/AniSound/requirements.txt\" \"c:/Users/megan/OneDrive/Desktop/AniSound/README.md\")",
+      "Bash(git --version)",
+      "Bash(\"c:/Users/megan/OneDrive/Desktop/AniSound/.gitignore\":*)"
+    ]
+  }
+}
