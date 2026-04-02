@@ -1,17 +1,8 @@
----
-title: AniSound Quiz
-emoji: 🎵
-colorFrom: purple
-colorTo: blue
-sdk: streamlit
-sdk_version: 1.55.0
-app_file: app.py
-pinned: false
----
-
 # 🎵 AniSound Quiz
 
 Guess the anime from its OP/ED audio clip!
+
+> Deployed on [Streamlit Cloud](https://streamlit.io/cloud)
 
 ## Features
 - 12 genres (Action, Romance, Comedy, Drama, and more)
@@ -37,6 +28,7 @@ streamlit run app.py
 | Anime metadata | [Jikan API](https://jikan.moe) |
 | Fuzzy matching | Python `difflib.SequenceMatcher` |
 | HTTP | `requests` |
+| Deployment | [Streamlit Cloud](https://streamlit.io/cloud) |
 
 ## Project Structure
 
