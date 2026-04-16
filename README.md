@@ -1,49 +1,63 @@
-# 🎵 AniSound Quiz
+# AniSound Quiz
 
-Guess the anime from its OP/ED audio clip!
+A web-based quiz game where you listen to anime opening/ending theme songs and try to guess the anime title.
 
-> Deployed on [Streamlit Cloud](https://streamlit.io/cloud)
+---
 
-## Features
-- 12 genres (Action, Romance, Comedy, Drama, and more)
-- 6 era filters (70s all the way to 2020s)
-- 5 format types (TV Series, Movies, OVA, ONA, Specials)
-- Fuzzy answer matching — typos are forgiven
-- Skip button, Try Again, and View Answer options
-- Per-round result summary with ranks
+## What does it do?
 
-## How to Run Locally
+The app plays a short audio clip from an anime theme. You type your guess and it tells you if you're right. It forgives typos too.
+
+You can filter by:
+- Genre (Action, Romance, Comedy, Drama, and more)
+- Era (1970s to 2020s)
+- Format (TV series, movies, OVA, etc.)
+
+At the end of each round you get a score and rank.
+
+---
+
+## How it works
+
+- Audio clips come from the **AnimeThemes API** (free, no key needed)
+- Anime info (title, genre, year) comes from the **Jikan API** (unofficial MyAnimeList API, also free)
+- Answer checking uses fuzzy matching so small typos don't count as wrong
+
+---
+
+## Tech used
+
+- Python
+- Streamlit (web app)
+- AnimeThemes API (audio)
+- Jikan API (anime data)
+- difflib (fuzzy answer matching)
+
+---
+
+## How to run it locally
 
 ```bash
+git clone https://github.com/MgDev2023/AniSound-quizz.git
+cd AniSound-quizz
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Stack
+---
 
-| Layer | Technology |
-|---|---|
-| Frontend / UI | [Streamlit](https://streamlit.io) |
-| Audio & themes | [AnimeThemes API](https://animethemes.moe) |
-| Anime metadata | [Jikan API](https://jikan.moe) |
-| Fuzzy matching | Python `difflib.SequenceMatcher` |
-| HTTP | `requests` |
-| Deployment | [Streamlit Cloud](https://streamlit.io/cloud) |
-
-## Project Structure
+## Project structure
 
 ```
-AniSound/
-├── app.py            # Streamlit UI and game flow
-├── data_loader.py    # API calls to AnimeThemes & Jikan
-├── game_logic.py     # Fuzzy guess checking and rank logic
-├── requirements.txt
-└── README.md
+AniSound-quizz/
+├── app.py          ← main game UI
+├── data_loader.py  ← fetches data from APIs
+├── game_logic.py   ← handles scoring and answer checking
+└── requirements.txt
 ```
 
-## APIs & Credits
+---
 
-- **[AnimeThemes.moe](https://animethemes.moe)** — community-sourced anime OP/ED audio
-- **[Jikan.moe](https://jikan.moe)** — unofficial MyAnimeList REST API (no key required)
+## Made by
 
-Both APIs are free and require no authentication.
+Megan — a fun side project combining my interest in anime with Python and API integration.
